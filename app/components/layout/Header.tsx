@@ -1,22 +1,10 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
+import { useApp } from '@/app/contexts/AppProvider'
 
-export default function Header() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode)
-    if (typeof document !== 'undefined') {
-      const htmlEl = document.documentElement
-      if (isDarkMode) {
-        htmlEl.removeAttribute('data-bs-theme')
-      } else {
-        htmlEl.setAttribute('data-bs-theme', 'dark')
-      }
-    }
-  }
+export function Header() {
+  const { darkMode, toggleDarkMode } = useApp()
 
   return (
     <header className="app-header">
@@ -50,7 +38,7 @@ export default function Header() {
             <button
               type="button"
               className="btn btn-icon theme-btn"
-              onClick={toggleTheme}
+              onClick={toggleDarkMode}
               aria-label="Toggle theme"
             >
               <svg className="icon-light" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">

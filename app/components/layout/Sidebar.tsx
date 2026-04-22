@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { useApp } from '@/app/contexts/AppProvider'
 
 interface NavItem {
   label: string
@@ -58,7 +59,8 @@ const navItems: NavItem[] = [
   },
 ]
 
-export default function Sidebar() {
+export function Sidebar() {
+  const { sidebarCollapsed } = useApp()
   const [expandedItems, setExpandedItems] = useState<string[]>([])
 
   const toggleExpand = (label: string) => {
@@ -68,7 +70,7 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="app-sidebar">
+    <aside className={`app-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
       <div className="app-brand">
         <a href="/" className="d-flex align-items-center gap-2">
           <img src="/assets/images/logo.webp" alt="NexLink" className="logo" />

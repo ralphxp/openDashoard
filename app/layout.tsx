@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../public/assets/libs/flaticon/css/all/all.css'
-import '../public/assets/libs/lucide/lucide.css'
-import '../public/assets/libs/fontawesome/css/all.min.css'
-import '../public/assets/libs/simplebar/simplebar.css'
-import '../public/assets/libs/node-waves/waves.css'
-import '../public/assets/libs/bootstrap-select/css/bootstrap-select.min.css'
-import '../public/assets/libs/flatpickr/flatpickr.min.css'
-import '../public/assets/libs/datatables/datatables.min.css'
-import '../public/assets/css/styles.css'
+import '/public/assets/libs/flaticon/css/all/all.css'
+import '/public/assets/libs/lucide/lucide.css'
+import '/public/assets/libs/fontawesome/css/all.min.css'
+import '/public/assets/libs/simplebar/simplebar.css'
+import '/public/assets/libs/node-waves/waves.css'
+import '/public/assets/libs/bootstrap-select/css/bootstrap-select.min.css'
+import '/public/assets/libs/flatpickr/flatpickr.min.css'
+import '/public/assets/libs/datatables/datatables.min.css'
+import '/public/assets/css/styles.css'
+import { RootLayoutClient } from './RootLayoutClient'
 
 export const metadata: Metadata = {
   title: 'NexLink | CRM Admin Dashboard Template',
@@ -56,9 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <div className="page-layout">
+        <RootLayoutClient>
           {children}
-        </div>
+        </RootLayoutClient>
       </body>
     </html>
   )
