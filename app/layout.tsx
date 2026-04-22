@@ -4,8 +4,8 @@ import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const metadata: Metadata = {
-  title: 'NexLink | CRM Admin Dashboard Template',
-  description: 'NexLink is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
+  title: 'Codizium | CRM Admin Dashboard Template',
+  description: 'Codizium is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
   icons: {
     icon: '/assets/images/favicon.png',
     apple: '/assets/images/apple-touch-icon.png',
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://nexlink.layoutdrop.com',
-    siteName: 'NexLink | CRM Admin Dashboard Template',
-    title: 'NexLink | CRM Admin Dashboard Template',
-    description: 'NexLink is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
+    url: 'https://codizium.ng',
+    siteName: 'Codizium | CRM Admin Dashboard Template',
+    title: 'Codizium | CRM Admin Dashboard Template',
+    description: 'Codizium is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
     images: [
       {
         url: '/assets/images/preview.png',
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    creator: '@layoutdrop',
-    title: 'NexLink | CRM Admin Dashboard Template',
-    description: 'NexLink is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
+    creator: '@codizium',
+    title: 'Codizium | CRM Admin Dashboard Template',
+    description: 'Codizium is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
   },
   keywords: 'Bootstrap Admin Template, CRM Dashboard, Admin Panel, Bootstrap 5 Dashboard, Project Management, Analytics Template, Responsive Admin',
   robots: 'index, follow',
   authors: [
     {
-      name: 'LayoutDrop',
+      name: 'Codizium',
     },
   ],
 }
