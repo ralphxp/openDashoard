@@ -1,21 +1,11 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '/public/assets/libs/flaticon/css/all/all.css'
-import '/public/assets/libs/lucide/lucide.css'
-import '/public/assets/libs/fontawesome/css/all.min.css'
-import '/public/assets/libs/simplebar/simplebar.css'
-import '/public/assets/libs/node-waves/waves.css'
-import '/public/assets/libs/bootstrap-select/css/bootstrap-select.min.css'
-import '/public/assets/libs/flatpickr/flatpickr.min.css'
-import '/public/assets/libs/datatables/datatables.min.css'
-import '/public/assets/css/styles.css'
-import { RootLayoutClient } from './RootLayoutClient'
 
 export const metadata: Metadata = {
   title: 'NexLink | CRM Admin Dashboard Template',
   description: 'NexLink is a modern Bootstrap 5 CRM Admin Dashboard Template designed for managing sales, analytics, projects, and team performance with clean UI, responsive layout, and prebuilt pages.',
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/assets/images/favicon.png',
     apple: '/assets/images/apple-touch-icon.png',
@@ -50,6 +40,11 @@ export const metadata: Metadata = {
   ],
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -57,10 +52,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+          rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/assets/libs/flaticon/css/all/all.css" />
+        <link rel="stylesheet" href="/assets/libs/lucide/lucide.css" />
+        <link rel="stylesheet" href="/assets/libs/fontawesome/css/all.min.css" />
+        <link rel="stylesheet" href="/assets/libs/simplebar/simplebar.css" />
+        <link rel="stylesheet" href="/assets/libs/node-waves/waves.css" />
+        <link rel="stylesheet" href="/assets/libs/bootstrap-select/css/bootstrap-select.min.css" />
+        <link rel="stylesheet" href="/assets/libs/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="/assets/libs/datatables/datatables.min.css" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+      </head>
       <body>
-        <RootLayoutClient>
-          {children}
-        </RootLayoutClient>
+        {children}
+
+        <Script src="/assets/libs/global/global.min.js" strategy="afterInteractive" />
+        <Script src="/assets/libs/flatpickr/flatpickr.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/appSettings.js" strategy="afterInteractive" />
+        <Script src="/assets/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
   )

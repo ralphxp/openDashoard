@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import { PageHeader, ChartCard, StatCard } from '@/app/components/common'
+import type { ApexOptions } from 'apexcharts'
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
@@ -33,7 +34,7 @@ export default function AnalyticsPage() {
     grid: {
       borderColor: '#e9e9f8',
     },
-  }
+  } satisfies ApexOptions
 
   const [conversionChartSeries] = useState([
     {
@@ -59,7 +60,7 @@ export default function AnalyticsPage() {
     grid: {
       borderColor: '#e9e9f8',
     },
-  }
+  } satisfies ApexOptions
 
   return (
     <div className="container-fluid">
