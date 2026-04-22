@@ -7,11 +7,11 @@ import { Sidebar } from './components/layout/Sidebar';
 export function RootLayoutClient({ children }: { children: React.ReactNode }) {
   return (
     <AppProvider>
-      <div className="d-flex">
+      <div className="page-wrapper">
         <Sidebar />
-        <div className="flex-grow-1 d-flex flex-column" style={{ minHeight: '100vh' }}>
+        <div className="app-content">
           <Header />
-          <main className="flex-grow-1">
+          <main className="main-content">
             {children}
           </main>
         </div>

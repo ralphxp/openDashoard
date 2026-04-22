@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '/public/assets/libs/flaticon/css/all/all.css'
 import '/public/assets/libs/lucide/lucide.css'
